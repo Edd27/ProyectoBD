@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D82D35AD-92A2-4CCB-8666-C663E1F04392}</ProjectGuid>
+    <ProjectGuid>{D08418F1-17EF-4937-A8DA-3A174738ECA6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PuntoDeVenta</RootNamespace>
     <AssemblyName>PuntoDeVenta</AssemblyName>
@@ -33,6 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,7 +59,78 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\daoInventario.cs" />
+    <Compile Include="Data\daoProductos.cs" />
+    <Compile Include="Data\DaoUsuarios.cs" />
+    <Compile Include="Data\daoVentas.cs" />
+    <Compile Include="Objects\clsClientes.cs" />
+    <Compile Include="Objects\clsEtadistico.cs" />
     <Compile Include="Objects\clsInventario.cs" />
+    <Compile Include="Objects\clsListaProductos.cs" />
+    <Compile Include="Objects\clsMuestraEmpleados.cs" />
+    <Compile Include="Objects\clsProductos.cs" />
+    <Compile Include="Objects\clsReporteDeVenta.cs" />
+    <Compile Include="Objects\clsUsuarios.cs" />
+    <Compile Include="Objects\clsVentas.cs" />
+    <Compile Include="Presentacion\frmAjustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAjustes.Designer.cs">
+      <DependentUpon>frmAjustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmCerrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmCerrar.Designer.cs">
+      <DependentUpon>frmCerrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmInformacionDelUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmInformacionDelUsuario.Designer.cs">
+      <DependentUpon>frmInformacionDelUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmVentasCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmVentasCobrar.Designer.cs">
+      <DependentUpon>frmVentasCobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmVentasModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmVentasModificar.Designer.cs">
+      <DependentUpon>frmVentasModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmVentasBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmVentasBuscar.Designer.cs">
+      <DependentUpon>frmVentasBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CatalogoEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CatalogoEmpleados.Designer.cs">
+      <DependentUpon>CatalogoEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Datoserror.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Datoserror.designer.cs">
+      <DependentUpon>Datoserror.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAgregarEmpleado.Designer.cs">
+      <DependentUpon>frmAgregarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmAgregarInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +142,18 @@
     </Compile>
     <Compile Include="Presentacion\frmEliminarInventario.Designer.cs">
       <DependentUpon>frmEliminarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmFinanzasPorCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmFinanzasPorCliente.Designer.cs">
+      <DependentUpon>frmFinanzasPorCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmModificarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmModificarEmpleado.Designer.cs">
+      <DependentUpon>frmModificarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmModificarInventario.cs">
       <SubType>Form</SubType>
@@ -78,8 +173,77 @@
     <Compile Include="Presentacion\Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\frmAjustes.resx">
+      <DependentUpon>frmAjustes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmCerrar.resx">
+      <DependentUpon>frmCerrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmInformacionDelUsuario.resx">
+      <DependentUpon>frmInformacionDelUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmVentasCobrar.resx">
+      <DependentUpon>frmVentasCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmVentasModificar.resx">
+      <DependentUpon>frmVentasModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmVentasBuscar.resx">
+      <DependentUpon>frmVentasBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CatalogoEmpleados.resx">
+      <DependentUpon>CatalogoEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Datoserror.resx">
+      <DependentUpon>Datoserror.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmAgregarEmpleado.resx">
+      <DependentUpon>frmAgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmAgregarInventario.resx">
+      <DependentUpon>frmAgregarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmEliminarInventario.resx">
+      <DependentUpon>frmEliminarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmFinanzasPorCliente.resx">
+      <DependentUpon>frmFinanzasPorCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmModificarEmpleado.resx">
+      <DependentUpon>frmModificarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmModificarInventario.resx">
+      <DependentUpon>frmModificarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmNuevoInventario.resx">
+      <DependentUpon>frmNuevoInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -88,7 +252,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Objects.clsProductos.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -102,6 +269,41 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\maximizar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximizar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meencanta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rombo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trianulo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trianulo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pentagono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xD.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

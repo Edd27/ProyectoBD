@@ -8,22 +8,21 @@ using MySql.Data.MySqlClient;
 
 namespace PuntoDeVenta.Data
 {
-    public class daoInventario
+  public  class daoInventario
     {
         /// <summary>
         /// Metodo que obtiene todos los inventarios registrados, se obtiene su ID, Nombre y descripcion
         /// </summary>
         /// <returns></returns>
         /// Se retorna una lista de todos los inventarios encontrados
-        public List<clsInventario> ObtenerTodos()
-        {
+        public List<clsInventario> ObtenerTodos() {
 
             MySqlConnection conexxion = new MySqlConnection();
             MySqlCommand comando = new MySqlCommand();
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root";
+                conexxion.ConnectionString= "server=localhost; database=puntodeventa; user=root; pwd=root";
                 conexxion.Open();
                 string strSQL = "select * from inventario";
                 comando = new MySqlCommand(strSQL, conexxion);
@@ -40,7 +39,7 @@ namespace PuntoDeVenta.Data
                 }
 
 
-
+           
 
                 return listinvent;
 
@@ -98,8 +97,7 @@ namespace PuntoDeVenta.Data
 
                 return false;
             }
-            finally
-            {
+            finally {
                 cm.Dispose();
                 cn.Close();
                 cn.Dispose();
@@ -128,18 +126,18 @@ namespace PuntoDeVenta.Data
                 conexxion.Open();
                 string strSQL = "select * from inventario where idinventario=@codigo";
                 comando = new MySqlCommand(strSQL, conexxion);
-                comando.Parameters.AddWithValue("@codigo", id);
+                comando.Parameters.AddWithValue("@codigo",id);
                 MySqlDataReader dr = comando.ExecuteReader();
-
+               
                 clsInventario x = new clsInventario();
 
                 while (dr.Read())
                 {
-
+                    
                     x.IDinventario = dr.GetInt32(0);
                     x.Nombre = dr.GetString(1);
                     x.Descripcion = dr.GetString(2);
-
+               
                 }
 
 
@@ -166,4 +164,3 @@ namespace PuntoDeVenta.Data
 
     }
 }
-
