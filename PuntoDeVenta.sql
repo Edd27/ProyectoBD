@@ -29,17 +29,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PuntoDeVenta`.`Inventario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `PuntoDeVenta`.`Inventario` (
-  `IDInventario` INT NOT NULL AUTO_INCREMENT,
-  `Nombre` VARCHAR(20) NOT NULL,
-  `Descripcion` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`IDInventario`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `PuntoDeVenta`.`Producto`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `PuntoDeVenta`.`Producto` (
@@ -49,14 +38,8 @@ CREATE TABLE IF NOT EXISTS `PuntoDeVenta`.`Producto` (
   `Tipo` VARCHAR(45) NOT NULL,
   `Talla` CHAR(10) NOT NULL,
   `Precio` DOUBLE NOT NULL,
-  `IDInventario` INT NOT NULL,
-  PRIMARY KEY (`idProducto`),
-  INDEX `fk_Producto_table1_idx` (`IDInventario` ASC),
-  CONSTRAINT `fk_Producto_table1`
-    FOREIGN KEY (`IDInventario`)
-    REFERENCES `PuntoDeVenta`.`Inventario` (`IDInventario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  `unitInStock` INT NOT NULL,
+  PRIMARY KEY (`idProducto`))
 ENGINE = InnoDB;
 
 
