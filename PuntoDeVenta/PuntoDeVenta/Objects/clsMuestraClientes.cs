@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace PuntoDeVenta.Objects
 {
-    public class clsClientes
+    class clsMuestraClientes
     {
         private int id;
         private string nombre;
         private string apellidos;
-        private string numero_telefonico;
-        
+
 
         public int ID
         {
@@ -25,6 +24,7 @@ namespace PuntoDeVenta.Objects
                 id = value;
             }
         }
+
 
         public string Nombre
         {
@@ -49,22 +49,6 @@ namespace PuntoDeVenta.Objects
                 apellidos = value;
             }
         }
-
-        public string Numero_telefonico
-        {
-            get
-            {
-                return numero_telefonico;
-            }
-            set
-            {
-                numero_telefonico = value;
-            }
-        }
-
-        
-
-       
 
     }
 }

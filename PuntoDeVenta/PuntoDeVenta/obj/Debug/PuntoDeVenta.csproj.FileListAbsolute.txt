@@ -2,7 +2,6 @@ C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\bin\Debug\Pu
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\bin\Debug\PuntoDeVenta.exe
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\bin\Debug\PuntoDeVenta.pdb
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
-C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\bin\Debug\MySql.Data.dll
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\bin\Debug\Google.Protobuf.dll
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\bin\Debug\Zstandard.Net.dll
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\bin\Debug\K4os.Compression.LZ4.Streams.dll

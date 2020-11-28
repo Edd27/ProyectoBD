@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\daoClientes.cs" />
     <Compile Include="Data\daoInventario.cs" />
     <Compile Include="Data\daoProductos.cs" />
     <Compile Include="Data\DaoUsuarios.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Objects\clsEtadistico.cs" />
     <Compile Include="Objects\clsInventario.cs" />
     <Compile Include="Objects\clsListaProductos.cs" />
+    <Compile Include="Objects\clsMuestraClientes.cs" />
     <Compile Include="Objects\clsMuestraEmpleados.cs" />
     <Compile Include="Objects\clsProductos.cs" />
     <Compile Include="Objects\clsReporteDeVenta.cs" />
