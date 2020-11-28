@@ -39,6 +39,7 @@ namespace PuntoDeVenta.Data
                 comando.Parameters.AddWithValue("@ID", null);
                 comando.Parameters.AddWithValue("@Nombre", agrega.Nombre);
                 comando.Parameters.AddWithValue("@Apellidos", agrega.Apellidos);
+                comando.Parameters.AddWithValue("@numero_telefonico", agrega.Numero_telefonico);
                 // comando.Parameters.AddWithValue("@numero_telefonico", agrega.numero_telefonico);
                 comando.ExecuteNonQuery();
                 return true;
@@ -83,7 +84,7 @@ namespace PuntoDeVenta.Data
                 obj.ID = dr.GetInt32("ID");
                 obj.Nombre = dr.GetString("Nombre");
                 obj.Apellidos = dr.GetString("Apellidos");
-
+                obj.Numero_telefonico = dr.GetString("Numero_telefonico");
 
                 lista.Add(obj);
             }

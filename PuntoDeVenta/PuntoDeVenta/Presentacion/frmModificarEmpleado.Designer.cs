@@ -281,6 +281,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmModificarEmpleado";
             this.Text = "frmModificarEmpleado";
+            this.Load += new System.EventHandler(this.frmModificarEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
