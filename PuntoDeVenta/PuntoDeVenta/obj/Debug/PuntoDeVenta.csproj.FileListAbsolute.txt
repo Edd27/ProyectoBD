@@ -41,3 +41,4 @@ C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\Pu
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.csproj.CopyComplete
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.exe
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.pdb
+C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.CatalogoClientes.resources

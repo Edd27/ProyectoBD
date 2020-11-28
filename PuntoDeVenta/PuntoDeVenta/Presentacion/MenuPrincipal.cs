@@ -139,5 +139,12 @@ namespace PuntoDeVenta.Presentacion
             new frmFinanzasPorCliente().ShowDialog();
             this.Visible = true;
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            CatalogoClientes ventana = new CatalogoClientes();
+            
+            ventana.Show();
+        }
     }
 }
