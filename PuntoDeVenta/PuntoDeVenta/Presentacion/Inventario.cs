@@ -118,7 +118,7 @@ namespace Presentacion
                     dgvProductos.Rows.Clear();
                     for (int i = 0; i < listProd.Count; i++)
                     {
-                        dgvProductos.Rows.Add(listProd[i].Producto, listProd[i].Descripcion, listProd[i].Tipo, listProd[i].Talla, listProd[i].Precio, daoInventario.ObtenerInventario(listProd[i].IDinventario).Nombre);
+                        dgvProductos.Rows.Add(listProd[i].Producto, listProd[i].Descripcion, listProd[i].Tipo, listProd[i].Talla, listProd[i].Precio, listProd[i].UnitInStock);
 
                     }
                     tbBusqueda.Text = "";
@@ -168,7 +168,7 @@ namespace Presentacion
 
                 for (int i = 0; i < listProd.Count; i++)
                 {
-                    dgvProductos.Rows.Add(listProd[i].Producto,listProd[i].Descripcion, listProd[i].Tipo, listProd[i].Talla, listProd[i].Precio,daoInventario.ObtenerInventario(listProd[i].IDinventario).Nombre);
+                    dgvProductos.Rows.Add(listProd[i].Producto,listProd[i].Descripcion, listProd[i].Tipo, listProd[i].Talla, listProd[i].Precio,listProd[i].UnitInStock);
 
                 }
             }

@@ -89,11 +89,11 @@ namespace PuntoDeVenta.Presentacion
                 poc = dgEmpleados.CurrentRow.Index;
                 int ID = int.Parse(dgEmpleados[0, poc].Value.ToString());
 
-                if (ID == this.clientes.ID)
+                /* if (ID == this.clientes.ID)
                 {
                     MessageBox.Show("No se puede eliminar el usuario que está en uso del sistema.");
                 }
-                else if (userRegi.MEliminarCliente(ID))
+                else */ if (userRegi.MEliminarCliente(ID))
                 {
                     dgEmpleados.DataSource = new DaoClientes().Mmostrarclientes();
                     MessageBox.Show("Se ha eliminado correctamente el empleado");

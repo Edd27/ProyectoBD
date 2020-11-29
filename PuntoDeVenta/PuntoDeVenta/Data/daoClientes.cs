@@ -195,7 +195,7 @@ namespace PuntoDeVenta.Data
                 conexxion.Open();
 
                 /// AGREGAR LA ACTUALIZACION A LA BASE DE DATOS
-                string strSQL = "Update clientes Set Nombre='" + obj.Nombre + "' , Apellidos='" + obj.Apellidos  + " Where ID=" + obj.ID;
+                string strSQL = "Update clientes Set Nombre='" + obj.Nombre + "' , Apellidos='" + obj.Apellidos + "' , Numero_telefonico='" + obj.Numero_telefonico + " Where ID=" + obj.ID;
                 comando = new MySqlCommand(strSQL, conexxion);
                 comando.ExecuteNonQuery();
 

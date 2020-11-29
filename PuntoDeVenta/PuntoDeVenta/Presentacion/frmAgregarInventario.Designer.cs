@@ -44,10 +44,9 @@
             this.tbTalla = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbAlmacen = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.tbID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtunitInStock = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
             this.SuspendLayout();
@@ -213,37 +212,10 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(31, 437);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 20);
+            this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Inventario";
+            this.label4.Text = "Cantidad";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // cbAlmacen
-            // 
-            this.cbAlmacen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAlmacen.FormattingEnabled = true;
-            this.cbAlmacen.Location = new System.Drawing.Point(156, 436);
-            this.cbAlmacen.Name = "cbAlmacen";
-            this.cbAlmacen.Size = new System.Drawing.Size(208, 21);
-            this.cbAlmacen.TabIndex = 7;
-            this.cbAlmacen.SelectedIndexChanged += new System.EventHandler(this.cbAlmacen_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.LightGray;
-            this.button1.Location = new System.Drawing.Point(379, 432);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 27);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Nuevo inventario";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbID
             // 
@@ -265,16 +237,22 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "ID";
             // 
+            // txtunitInStock
+            // 
+            this.txtunitInStock.Location = new System.Drawing.Point(156, 437);
+            this.txtunitInStock.Name = "txtunitInStock";
+            this.txtunitInStock.Size = new System.Drawing.Size(102, 20);
+            this.txtunitInStock.TabIndex = 15;
+            // 
             // frmAgregarInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(584, 558);
+            this.Controls.Add(this.txtunitInStock);
             this.Controls.Add(this.tbID);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.cbAlmacen);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbTalla);
             this.Controls.Add(this.label3);
@@ -293,7 +271,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAgregarInventario";
             this.Text = "frmAgregarInventario";
-            this.Load += new System.EventHandler(this.frmAgregarInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
             this.ResumeLayout(false);
@@ -318,9 +295,8 @@
         private System.Windows.Forms.TextBox tbTalla;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbAlmacen;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtunitInStock;
     }
 }

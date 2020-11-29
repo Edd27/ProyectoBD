@@ -14,7 +14,7 @@ namespace PuntoDeVenta.Objects
         String tipo;
         String talla;
         double precio;
-        int idInventario;
+        int unitInStock;
 
         public int IDproducto
         {
@@ -88,15 +88,15 @@ namespace PuntoDeVenta.Objects
             }
         }
 
-        public int IDinventario
+        public int UnitInStock
         {
             get
             {
-                return idInventario;
+                return unitInStock;
             }
             set
             {
-                idInventario = value;
+                unitInStock = value;
             }
         }
 

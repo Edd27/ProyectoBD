@@ -54,7 +54,7 @@ namespace PuntoDeVenta.Presentacion
             // ventana.Show();
         }
 
-        /// <summary>
+        /// <summary>3
         /// Carga la hora y la fecha en los labels
         private void horafecha_Tick(object sender, EventArgs e)
         {

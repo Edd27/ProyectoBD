@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificarInventario));
             this.btnModificar = new System.Windows.Forms.Button();
             this.btncerrar = new System.Windows.Forms.PictureBox();
-            this.cbAlmacen = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbTalla = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.tbID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtunitInStock = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             this.SuspendLayout();
@@ -80,15 +80,6 @@
             this.btncerrar.TabStop = false;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
-            // cbAlmacen
-            // 
-            this.cbAlmacen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAlmacen.FormattingEnabled = true;
-            this.cbAlmacen.Location = new System.Drawing.Point(193, 424);
-            this.cbAlmacen.Name = "cbAlmacen";
-            this.cbAlmacen.Size = new System.Drawing.Size(208, 21);
-            this.cbAlmacen.TabIndex = 7;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -96,9 +87,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(68, 425);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Almacen";
+            this.label4.Text = "Cantidad";
             // 
             // tbTalla
             // 
@@ -234,17 +225,24 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "ID";
             // 
+            // txtunitInStock
+            // 
+            this.txtunitInStock.Location = new System.Drawing.Point(193, 427);
+            this.txtunitInStock.Name = "txtunitInStock";
+            this.txtunitInStock.Size = new System.Drawing.Size(102, 20);
+            this.txtunitInStock.TabIndex = 43;
+            // 
             // frmModificarInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(601, 551);
+            this.Controls.Add(this.txtunitInStock);
             this.Controls.Add(this.tbID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnminimizar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbAlmacen);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbTalla);
             this.Controls.Add(this.label3);
@@ -272,7 +270,6 @@
         #endregion
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.PictureBox btncerrar;
-        private System.Windows.Forms.ComboBox cbAlmacen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbTalla;
         private System.Windows.Forms.Label label3;
@@ -288,5 +285,6 @@
         private System.Windows.Forms.PictureBox btnminimizar;
         private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtunitInStock;
     }
 }

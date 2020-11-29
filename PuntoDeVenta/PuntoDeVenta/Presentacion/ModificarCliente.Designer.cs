@@ -40,9 +40,9 @@
             this.lblMaterial = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txttelefono = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txttelefono = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
@@ -181,15 +181,6 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // txttelefono
-            // 
-            this.txttelefono.Enabled = false;
-            this.txttelefono.Location = new System.Drawing.Point(129, 265);
-            this.txttelefono.Name = "txttelefono";
-            this.txttelefono.PasswordChar = '*';
-            this.txttelefono.Size = new System.Drawing.Size(271, 20);
-            this.txttelefono.TabIndex = 48;
-            // 
             // txtApellidos
             // 
             this.txtApellidos.Location = new System.Drawing.Point(129, 217);
@@ -204,12 +195,20 @@
             this.txtNombre.Size = new System.Drawing.Size(271, 20);
             this.txtNombre.TabIndex = 46;
             // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(129, 265);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(271, 20);
+            this.txttelefono.TabIndex = 63;
+            // 
             // ModificarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(444, 450);
+            this.Controls.Add(this.txttelefono);
             this.Controls.Add(this.pbMaximizar);
             this.Controls.Add(this.btnminimizar);
             this.Controls.Add(this.btncerrar);
@@ -221,7 +220,6 @@
             this.Controls.Add(this.lblMaterial);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txttelefono);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -249,8 +247,8 @@
         private System.Windows.Forms.Label lblMaterial;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txttelefono;
     }
 }

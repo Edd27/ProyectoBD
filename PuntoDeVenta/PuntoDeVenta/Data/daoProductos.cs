@@ -41,7 +41,7 @@ namespace PuntoDeVenta.Data
                     x.Tipo = dr.GetString(3);
                     x.Talla = dr.GetString(4);
                     x.Precio = dr.GetDouble(5);
-                    x.IDinventario = dr.GetInt16(6);
+                    x.UnitInStock = dr.GetInt32(6);
                     listprod.Add(x);
                 }
 
@@ -103,7 +103,7 @@ namespace PuntoDeVenta.Data
                     x.Tipo = dr.GetString(3);
                     x.Talla = dr.GetString(4);
                     x.Precio = dr.GetDouble(5);
-                    x.IDinventario = dr.GetInt16(6);
+                    x.UnitInStock = dr.GetInt32(6);
                    
                 }
 
@@ -148,7 +148,7 @@ namespace PuntoDeVenta.Data
                 cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root ";
                 cn.Open();
 
-                String srt = "insert into producto values(@ID,@Prod,@Desc,@Tipo,@Talla,@Precio,@inventario)";
+                String srt = "insert into producto values(@ID,@Prod,@Desc,@Tipo,@Talla,@Precio,@unitInStock)";
                 cm = new MySqlCommand(srt, cn);
                 cm.Parameters.AddWithValue("@ID", nuevo.IDproducto);
                 cm.Parameters.AddWithValue("@Prod", nuevo.Producto);
@@ -156,7 +156,7 @@ namespace PuntoDeVenta.Data
                 cm.Parameters.AddWithValue("@Tipo", nuevo.Tipo);
                 cm.Parameters.AddWithValue("@Talla", nuevo.Talla);
                 cm.Parameters.AddWithValue("@Precio", nuevo.Precio);
-                cm.Parameters.AddWithValue("@inventario", nuevo.IDinventario);
+                cm.Parameters.AddWithValue("@unitInStock", nuevo.UnitInStock);
                 cm.ExecuteNonQuery();
                 return true;
 
@@ -198,7 +198,7 @@ namespace PuntoDeVenta.Data
                 cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root ";
                 cn.Open();
 
-                String srt = " UPDATE producto SET Producto=@Prod,Descripcion=@Desc,Tipo=@Tipo,Talla=@Talla,Precio=@Precio,idInventario=@inventario where idProducto= @ID";
+                String srt = " UPDATE producto SET Producto=@Prod,Descripcion=@Desc,Tipo=@Tipo,Talla=@Talla,Precio=@Precio,idInventario=@inventario,unitInStock=@unitInStock where idProducto= @ID";
                 cm = new MySqlCommand(srt, cn);
                 cm.Parameters.AddWithValue("@ID", nuevo.IDproducto);
                 cm.Parameters.AddWithValue("@Prod", nuevo.Producto);
@@ -206,7 +206,7 @@ namespace PuntoDeVenta.Data
                 cm.Parameters.AddWithValue("@Tipo", nuevo.Tipo);
                 cm.Parameters.AddWithValue("@Talla", nuevo.Talla);
                 cm.Parameters.AddWithValue("@Precio", nuevo.Precio);
-                cm.Parameters.AddWithValue("@inventario", nuevo.IDinventario);
+                cm.Parameters.AddWithValue("@unitInStock", nuevo.UnitInStock);
                 cm.ExecuteNonQuery();
                 return true;
 
@@ -313,7 +313,7 @@ namespace PuntoDeVenta.Data
                     x.Tipo = dr.GetString(3);
                     x.Talla = dr.GetString(4);
                     x.Precio = dr.GetDouble(5);
-                    x.IDinventario = dr.GetInt16(6);
+                    x.UnitInStock = dr.GetInt32(6);
                     listprod.Add(x);
                 }
 

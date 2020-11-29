@@ -49,7 +49,7 @@ namespace PuntoDeVenta.Presentacion
         /// <param name="e"></param>
         private void frmModificarInventario_Load(object sender, EventArgs e)
         {
-            cargarInventarios();
+            
             cargar();
         }
 
@@ -64,7 +64,7 @@ namespace PuntoDeVenta.Presentacion
         {
             try
             {
-                if (tbDesc.Text == "" | tbID.Text == "" | tbPrecio.Text == "" | tbProducto.Text == "" | tbTalla.Text == "" | tbTipo.Text == "" | cbAlmacen.SelectedIndex == -1)
+                if (tbDesc.Text == "" | tbID.Text == "" | tbPrecio.Text == "" | tbProducto.Text == "" | tbTalla.Text == "" | tbTipo.Text == "" | txtunitInStock.Text == "")
                 {
                     MessageBox.Show("Faltaron datos por llenar");
                 }
@@ -77,7 +77,7 @@ namespace PuntoDeVenta.Presentacion
                     x.Precio = double.Parse(tbPrecio.Text);
                     x.Talla = tbTalla.Text;
                     x.Descripcion = tbDesc.Text;
-                    x.IDinventario = listInven[cbAlmacen.SelectedIndex].IDinventario;
+                    x.UnitInStock = int.Parse(txtunitInStock.Text);
                     x.Tipo = tbTipo.Text;
 
                     if (new daoProductos().ModificarProducto(x))
@@ -115,8 +115,8 @@ namespace PuntoDeVenta.Presentacion
             tbTalla.Text = producto.Talla;
             tbTipo.Text = producto.Tipo;
             tbProducto.Text = producto.Producto;
+            txtunitInStock.Text = "" + producto.UnitInStock;
 
-            cbAlmacen.SelectedIndex = producto.IDinventario-1;
 
         }
 
@@ -124,16 +124,9 @@ namespace PuntoDeVenta.Presentacion
         /// Metodo que carga todos los inventarios que se tienen agregados
         /// </summary>
 
-        public void cargarInventarios()
-        {
-            listInven = new daoInventario().ObtenerTodos();
+        
 
-            for (int i = 0; i < listInven.Count; i++)
-            {
-                cbAlmacen.Items.Add(listInven[i].Nombre);
-            }
-
-        }
+        
 
         private void tbDesc_TextChanged(object sender, EventArgs e)
         {

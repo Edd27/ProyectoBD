@@ -44,7 +44,7 @@ namespace PuntoDeVenta.Presentacion
 
             try
             {
-                if (tbDes.Text == "" | tbID.Text == "" | tbPrecio.Text == "" | tbProducto.Text == "" | tbTalla.Text == "" | tbTipo.Text == "" | cbAlmacen.SelectedIndex == -1)
+                if (tbDes.Text == "" | tbID.Text == "" | tbPrecio.Text == "" | tbProducto.Text == "" | tbTalla.Text == "" | tbTipo.Text == "" | txtunitInStock.Text == "")
                 {
                     MessageBox.Show("Faltaron datos por llenar");
                 }
@@ -56,7 +56,7 @@ namespace PuntoDeVenta.Presentacion
                     x.Precio = double.Parse(tbPrecio.Text);
                     x.Talla = tbTalla.Text;
                     x.Descripcion = tbDes.Text;
-                    x.IDinventario = listInven[cbAlmacen.SelectedIndex].IDinventario;
+                    x.UnitInStock = int.Parse(txtunitInStock.Text);
                     x.Tipo = tbTipo.Text;
 
 
@@ -87,7 +87,7 @@ namespace PuntoDeVenta.Presentacion
         /// <param name="sender"></param>
         /// <param name="e"></param>
 
-        private void frmAgregarInventario_Load(object sender, EventArgs e)
+       /* private void frmAgregarInventario_Load(object sender, EventArgs e)
         {
             cargar();
             if (cbAlmacen.Items.Count!=0)
@@ -95,7 +95,7 @@ namespace PuntoDeVenta.Presentacion
                 cbAlmacen.SelectedIndex = 0;
             }
            
-        }
+        } */
 
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace PuntoDeVenta.Presentacion
         /// Metodo donde se cargan los datos de todos los inventarios que se tienen
         /// Se añaden al combobox
         /// </summary>
-        public void cargar() {
+      /*  public void cargar() {
             cbAlmacen.Items.Clear();
             listInven = new daoInventario().ObtenerTodos();
 
@@ -134,20 +134,20 @@ namespace PuntoDeVenta.Presentacion
                 cbAlmacen.Items.Add(listInven[i].Nombre);
             }
         
-        }
+        } */
 
         /// <summary>
         /// Se llama al formulario del nuevo inventario, este es para agregar nuevos inventarios
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        /* private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             new frmNuevoInventario().ShowDialog();
             this.Visible = true;
             cargar();
-        }
+        } */
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
