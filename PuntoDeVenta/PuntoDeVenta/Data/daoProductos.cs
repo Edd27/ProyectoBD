@@ -198,7 +198,7 @@ namespace PuntoDeVenta.Data
                 cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root ";
                 cn.Open();
 
-                String srt = " UPDATE producto SET Producto=@Prod,Descripcion=@Desc,Tipo=@Tipo,Talla=@Talla,Precio=@Precio,idInventario=@inventario,unitInStock=@unitInStock where idProducto= @ID";
+                String srt = " UPDATE producto SET Producto=@Prod,Descripcion=@Desc,Tipo=@Tipo,Talla=@Talla,Precio=@Precio,unitInStock=@unitInStock where idProducto= @ID";
                 cm = new MySqlCommand(srt, cn);
                 cm.Parameters.AddWithValue("@ID", nuevo.IDproducto);
                 cm.Parameters.AddWithValue("@Prod", nuevo.Producto);

@@ -62,7 +62,8 @@ namespace PuntoDeVenta.Presentacion
         /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (new daoProductos().EliminarProducto(id))
+            daoProductos eliminar=new daoProductos();
+            if (eliminar.EliminarProducto(id))
             {
                 this.Close();
             }
