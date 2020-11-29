@@ -32,8 +32,9 @@ namespace PuntoDeVenta.Data
                 conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
                 conexxion.Open();
 
-                /// AGREGAR EL REGISTRO A LA BASE DE DATOS
-                string strSQL = "insert into clientes values (@ID,@Nombre,@Apellidos,@numero_telefonico)";
+                /// AGREGAR EL REGISTRO A LA BASE DE DATOS   call InsertarCliente(0,"Roy","Guzman","4451236576")$$
+               string strSQL = " call InsertarCliente(@ID,@Nombre,@Apellidos,@numero_telefonico)";
+
                 comando = new MySqlCommand(strSQL, conexxion);
 
                 comando.Parameters.AddWithValue("@ID", null);
@@ -195,7 +196,8 @@ namespace PuntoDeVenta.Data
                 conexxion.Open();
 
                 /// AGREGAR LA ACTUALIZACION A LA BASE DE DATOS
-                string strSQL = "Update clientes Set Nombre='" + obj.Nombre + "' , Apellidos='" + obj.Apellidos + "' , Numero_telefonico='" + obj.Numero_telefonico + " Where ID=" + obj.ID;
+                string strSQL = "call ModificarCliente('"+ obj.ID + "','" + obj.Nombre + "','" + obj.Apellidos + "','" + obj.Numero_telefonico + " )";
+                
                 comando = new MySqlCommand(strSQL, conexxion);
                 comando.ExecuteNonQuery();
 

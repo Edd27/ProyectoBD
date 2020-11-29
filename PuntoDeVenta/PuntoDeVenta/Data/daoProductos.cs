@@ -147,8 +147,8 @@ namespace PuntoDeVenta.Data
             {
                 cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678 ";
                 cn.Open();
-
-                String srt = "insert into producto values(@ID,@Prod,@Desc,@Tipo,@Talla,@Precio,@unitInStock)";
+                String srt = "call InsertarProducto(@ID,@Prod,@Desc,@Tipo,@Talla,@Precio,@unitInStock)";
+                
                 cm = new MySqlCommand(srt, cn);
                 cm.Parameters.AddWithValue("@ID", nuevo.IDproducto);
                 cm.Parameters.AddWithValue("@Prod", nuevo.Producto);
@@ -197,12 +197,13 @@ namespace PuntoDeVenta.Data
             {
                 cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678 ";
                 cn.Open();
+                String srt = " call ModificarProducto(@ID,@Prod,@Desc,@Tipo,@Talla,@Precio,@unitInStock)";
 
-                String srt = " UPDATE producto SET Producto=@Prod,Descripcion=@Desc,Tipo=@Tipo,Talla=@Talla,Precio=@Precio,unitInStock=@unitInStock where idProducto= @ID";
+                //String srt = " UPDATE producto SET Producto=@Prod,Descripcion=@Desc,Tipo=@Tipo,Talla=@Talla,Precio=@Precio,unitInStock=@unitInStock where idProducto= @ID";
                 cm = new MySqlCommand(srt, cn);
                 cm.Parameters.AddWithValue("@ID", nuevo.IDproducto);
                 cm.Parameters.AddWithValue("@Prod", nuevo.Producto);
-                cm.Parameters.AddWithValue("@Desc", nuevo.Descripcion);
+                ////cm.Parameters.AddWithValue("@Desc", nuevo.Descripcion);
                 cm.Parameters.AddWithValue("@Tipo", nuevo.Tipo);
                 cm.Parameters.AddWithValue("@Talla", nuevo.Talla);
                 cm.Parameters.AddWithValue("@Precio", nuevo.Precio);

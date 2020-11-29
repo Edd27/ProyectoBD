@@ -33,7 +33,7 @@ namespace PuntoDeVenta.Data
                 conexxion.Open();
 
                 /// AGREGAR EL REGISTRO A LA BASE DE DATOS
-                string strSQL = "insert into usuarios values (@IDusuario,@Login,@Nombre,@Apellidos,sha(@Password),@Administrador)";
+                string strSQL = "call InsertarUsuario(@IDusuario,@Login,@Nombre,@Apellidos,@Password,@Administrador)";
                 comando = new MySqlCommand(strSQL, conexxion);
 
                 comando.Parameters.AddWithValue("@IDusuario", null);
