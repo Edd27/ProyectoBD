@@ -164,5 +164,10 @@ namespace PuntoDeVenta.Presentacion
 
             }
         }
+
+        private void frmModificarEmpleado_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

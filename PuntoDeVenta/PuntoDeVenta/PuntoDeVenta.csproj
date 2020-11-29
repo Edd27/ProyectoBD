@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\daoClientes.cs" />
     <Compile Include="Data\daoInventario.cs" />
     <Compile Include="Data\daoProductos.cs" />
     <Compile Include="Data\DaoUsuarios.cs" />
@@ -66,11 +67,24 @@
     <Compile Include="Objects\clsEtadistico.cs" />
     <Compile Include="Objects\clsInventario.cs" />
     <Compile Include="Objects\clsListaProductos.cs" />
+    <Compile Include="Objects\clsMuestraClientes.cs" />
     <Compile Include="Objects\clsMuestraEmpleados.cs" />
     <Compile Include="Objects\clsProductos.cs" />
     <Compile Include="Objects\clsReporteDeVenta.cs" />
     <Compile Include="Objects\clsUsuarios.cs" />
     <Compile Include="Objects\clsVentas.cs" />
+    <Compile Include="Presentacion\AgregarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AgregarCliente.Designer.cs">
+      <DependentUpon>AgregarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CatalogoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CatalogoClientes.Designer.cs">
+      <DependentUpon>CatalogoClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmAjustes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,8 +199,20 @@
     <Compile Include="Presentacion\frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\ModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ModificarCliente.Designer.cs">
+      <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\AgregarCliente.resx">
+      <DependentUpon>AgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CatalogoClientes.resx">
+      <DependentUpon>CatalogoClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmAjustes.resx">
       <DependentUpon>frmAjustes.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ModificarCliente.resx">
+      <DependentUpon>ModificarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -301,6 +330,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pentagono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xD.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

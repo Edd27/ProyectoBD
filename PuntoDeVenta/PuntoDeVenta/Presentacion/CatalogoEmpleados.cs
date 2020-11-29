@@ -159,5 +159,15 @@ namespace PuntoDeVenta.Presentacion
             this.Visible = false;
            // ventana.Show();
         }
+
+        private void CatalogoEmpleados_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

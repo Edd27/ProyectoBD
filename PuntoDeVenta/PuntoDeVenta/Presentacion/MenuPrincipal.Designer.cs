@@ -187,6 +187,7 @@
             this.btnClientes.TabIndex = 21;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // lblfecha
             // 
