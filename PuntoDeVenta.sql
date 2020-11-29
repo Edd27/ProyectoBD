@@ -109,3 +109,14 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 INSERT INTO Usuarios(Login,Nombre,Apellidos,Password,Administrador) VALUES ('admin','Benito','Juárez',sha("root"),1);
+               
+DELIMITER $$
+create trigger trigger_unitInStock before insert on producto
+for each row
+begin
+if NEW.unitInStock< 0 then 
+set NEW.unitInStock=0;
+elseif NEW.NEW.unitInStock >0 then
+set NEW.unitInStock=NEW.unitInStock;
+end if;
+end $$
