@@ -37,13 +37,13 @@
             this.lbUsuario = new System.Windows.Forms.Label();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
-            this.btnEstadisticos = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.lblfecha = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.btnAhustes = new System.Windows.Forms.Button();
+            this.btnReporteVentas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +63,7 @@
             // 
             this.btnminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnminimizar.Image")));
-            this.btnminimizar.Location = new System.Drawing.Point(889, 9);
+            this.btnminimizar.Location = new System.Drawing.Point(679, 9);
             this.btnminimizar.Name = "btnminimizar";
             this.btnminimizar.Size = new System.Drawing.Size(15, 15);
             this.btnminimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -74,7 +74,7 @@
             // 
             this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
-            this.btncerrar.Location = new System.Drawing.Point(930, 9);
+            this.btncerrar.Location = new System.Drawing.Point(720, 9);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(15, 15);
             this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -113,7 +113,7 @@
             this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVentas.ForeColor = System.Drawing.Color.LightGray;
-            this.btnVentas.Location = new System.Drawing.Point(29, 118);
+            this.btnVentas.Location = new System.Drawing.Point(71, 118);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(115, 103);
             this.btnVentas.TabIndex = 17;
@@ -130,30 +130,13 @@
             this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.ForeColor = System.Drawing.Color.LightGray;
-            this.btnInventario.Location = new System.Drawing.Point(198, 118);
+            this.btnInventario.Location = new System.Drawing.Point(230, 118);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(119, 103);
             this.btnInventario.TabIndex = 18;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.UseVisualStyleBackColor = false;
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
-            // 
-            // btnEstadisticos
-            // 
-            this.btnEstadisticos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.btnEstadisticos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
-            this.btnEstadisticos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.btnEstadisticos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
-            this.btnEstadisticos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstadisticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstadisticos.ForeColor = System.Drawing.Color.LightGray;
-            this.btnEstadisticos.Location = new System.Drawing.Point(367, 118);
-            this.btnEstadisticos.Name = "btnEstadisticos";
-            this.btnEstadisticos.Size = new System.Drawing.Size(142, 103);
-            this.btnEstadisticos.TabIndex = 19;
-            this.btnEstadisticos.Text = "Estadisticos";
-            this.btnEstadisticos.UseVisualStyleBackColor = false;
-            this.btnEstadisticos.Click += new System.EventHandler(this.btnEstadisticos_Click);
             // 
             // btnUsuarios
             // 
@@ -164,7 +147,7 @@
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.LightGray;
-            this.btnUsuarios.Location = new System.Drawing.Point(565, 118);
+            this.btnUsuarios.Location = new System.Drawing.Point(394, 118);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(115, 103);
             this.btnUsuarios.TabIndex = 20;
@@ -181,7 +164,7 @@
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.Color.LightGray;
-            this.btnClientes.Location = new System.Drawing.Point(731, 118);
+            this.btnClientes.Location = new System.Drawing.Point(560, 118);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(115, 103);
             this.btnClientes.TabIndex = 21;
@@ -224,7 +207,7 @@
             this.btnAhustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAhustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAhustes.ForeColor = System.Drawing.Color.LightGray;
-            this.btnAhustes.Location = new System.Drawing.Point(814, 318);
+            this.btnAhustes.Location = new System.Drawing.Point(620, 318);
             this.btnAhustes.Name = "btnAhustes";
             this.btnAhustes.Size = new System.Drawing.Size(115, 40);
             this.btnAhustes.TabIndex = 25;
@@ -232,18 +215,34 @@
             this.btnAhustes.UseVisualStyleBackColor = false;
             this.btnAhustes.Click += new System.EventHandler(this.btnAhustes_Click);
             // 
+            // btnReporteVentas
+            // 
+            this.btnReporteVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
+            this.btnReporteVentas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.btnReporteVentas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnReporteVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
+            this.btnReporteVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteVentas.ForeColor = System.Drawing.Color.LightGray;
+            this.btnReporteVentas.Location = new System.Drawing.Point(355, 318);
+            this.btnReporteVentas.Name = "btnReporteVentas";
+            this.btnReporteVentas.Size = new System.Drawing.Size(203, 40);
+            this.btnReporteVentas.TabIndex = 26;
+            this.btnReporteVentas.Text = "Reporte Ventas";
+            this.btnReporteVentas.UseVisualStyleBackColor = false;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(957, 380);
+            this.ClientSize = new System.Drawing.Size(752, 380);
+            this.Controls.Add(this.btnReporteVentas);
             this.Controls.Add(this.btnAhustes);
             this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.lblhora);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnUsuarios);
-            this.Controls.Add(this.btnEstadisticos);
             this.Controls.Add(this.btnInventario);
             this.Controls.Add(this.btnVentas);
             this.Controls.Add(this.lbUsuario);
@@ -274,9 +273,9 @@
         private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.Label lblhora;
         private System.Windows.Forms.Timer horafecha;
-        public System.Windows.Forms.Button btnEstadisticos;
         public System.Windows.Forms.Button btnUsuarios;
         public System.Windows.Forms.Button btnClientes;
         public System.Windows.Forms.Button btnAhustes;
+        public System.Windows.Forms.Button btnReporteVentas;
     }
 }

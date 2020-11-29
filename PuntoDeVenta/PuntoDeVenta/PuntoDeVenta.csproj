@@ -157,12 +157,6 @@
     <Compile Include="Presentacion\frmEliminarInventario.Designer.cs">
       <DependentUpon>frmEliminarInventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmFinanzasPorCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frmFinanzasPorCliente.Designer.cs">
-      <DependentUpon>frmFinanzasPorCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentacion\frmModificarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,9 +242,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmEliminarInventario.resx">
       <DependentUpon>frmEliminarInventario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmFinanzasPorCliente.resx">
-      <DependentUpon>frmFinanzasPorCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmModificarEmpleado.resx">
       <DependentUpon>frmModificarEmpleado.cs</DependentUpon>

@@ -125,21 +125,6 @@ namespace PuntoDeVenta.Presentacion
 
         }
 
-
-        /// <summary>
-        ///Metodo de click del boton de usuarios
-        ///Al momento que se le da click muestra la interfaz de finanzas
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnEstadisticos_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-         
-            new frmFinanzasPorCliente().ShowDialog();
-            this.Visible = true;
-        }
-
         private void btnClientes_Click(object sender, EventArgs e)
         {
             CatalogoClientes ventana = new CatalogoClientes();

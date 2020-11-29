@@ -8,21 +8,10 @@ namespace PuntoDeVenta.Objects
 {
     public class clsReporteDeVenta
     {
-        int idProducto;
         int idVenta;
-        double precioUnitario;
-        int cantidad;
-        public int IDproducto
-        {
-            get
-            {
-                return idProducto;
-            }
-            set
-            {
-                idProducto = value;
-            }
-        }
+        string fechaVenta;
+        double montoTotal;
+        string empleado;
 
         public int IDventa
         {
@@ -36,28 +25,34 @@ namespace PuntoDeVenta.Objects
             }
         }
 
-        public double PrecioUnitario
+        public string FechaVenta
         {
             get
             {
-                return precioUnitario;
+                return fechaVenta;
             }
             set
             {
-                precioUnitario = value;
+                fechaVenta = value;
             }
         }
 
-        public int Cantidad
+        public double MontoTotal
         {
             get
             {
-                return cantidad;
+                return montoTotal;
             }
             set
             {
-                cantidad = value;
+                montoTotal = value;
             }
+        }
+
+        public string Empleado
+        {
+            get{return Empleado;}
+            set{ Empleado = value; }
         }
 
     }

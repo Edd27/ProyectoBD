@@ -24,7 +24,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
                 conexxion.Open();
                 string strSQL = "select * from producto";
                 comando = new MySqlCommand(strSQL, conexxion);
@@ -84,7 +84,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
                 conexxion.Open();
                 string strSQL = "select * from producto where idProducto = @numero";
                 comando = new MySqlCommand(strSQL, conexxion);
@@ -145,7 +145,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root ";
+                cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678 ";
                 cn.Open();
 
                 String srt = "insert into producto values(@ID,@Prod,@Desc,@Tipo,@Talla,@Precio,@unitInStock)";
@@ -195,7 +195,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root ";
+                cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678 ";
                 cn.Open();
 
                 String srt = " UPDATE producto SET Producto=@Prod,Descripcion=@Desc,Tipo=@Tipo,Talla=@Talla,Precio=@Precio,unitInStock=@unitInStock where idProducto= @ID";
@@ -245,7 +245,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
                 conexxion.Open();
                 string strSQL = "Delete from producto where idProducto = @numero";
                 comando = new MySqlCommand(strSQL, conexxion);
@@ -295,7 +295,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
                 conexxion.Open();
                 string strSQL = "SELECT * FROM producto where producto like concat( @texto ,'%')";
                 comando = new MySqlCommand(strSQL, conexxion);
@@ -356,7 +356,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
                 conexxion.Open();
                 string strSQL = "select count(total)as ventas,(select nombre from usuarios where Usuarios_IDusuario=IDusuario )as nombre, " +
                     "total from ventas where fecha between('2020-05-19')and('2020-05-20') GROUP BY Usuarios_IDusuario; ";
