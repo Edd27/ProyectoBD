@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using PuntoDeVenta.Objects;
 using PuntoDeVenta.Data;
+using MySql.Data.MySqlClient;
 
 namespace Presentacion
 {
@@ -104,6 +105,10 @@ namespace Presentacion
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            MySqlConnection cn = new MySqlConnection();
+            MySqlCommand cm = new MySqlCommand();
+            cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root ";
+            cn.Open();
             frmVentasBuscar abrir = new frmVentasBuscar();
             clsListaProductos clsProducto = abrir.showReturn();
             if (clsProducto!=null)
@@ -116,6 +121,12 @@ namespace Presentacion
                         productos[i].Cantidad += clsProducto.Cantidad;
                         productos[i].Subtotal += clsProducto.Subtotal;
                         flag = false;
+                        String srt = " UPDATE producto SET Set Nombre='" + clsProducto.Cantidad +  "where idProducto= @ID";
+                        cm = new MySqlCommand(srt, cn);
+                       
+                       // cm.Parameters.AddWithValue("@unitInStock", nuevo.UnitInStock);
+                        cm.ExecuteNonQuery();
+                        
                     }
                 }
                 if (flag)
@@ -184,6 +195,11 @@ namespace Presentacion
                 frmVentasBuscar frmVentasBuscar = new frmVentasBuscar();
                 frmVentasBuscar.Show();
             }
+        }
+
+        private void frmVentas_Load(object sender, EventArgs e)
+        {
+
         }
 
         /// <summary>
