@@ -89,3 +89,6 @@ C:\Users\edgar\Desktop\ProyectoBD\PuntoDeVenta\PuntoDeVenta\bin\Debug\System.Mem
 C:\Users\edgar\Desktop\ProyectoBD\PuntoDeVenta\PuntoDeVenta\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\edgar\Desktop\ProyectoBD\PuntoDeVenta\PuntoDeVenta\bin\Debug\MySql.Data.xml
 C:\Users\edgar\Desktop\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.csproj.CopyComplete
+C:\Users\edgar\Desktop\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmReporteVentas.resources
+C:\Users\edgar\Desktop\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmReporteVentasPeriodo.resources
+C:\Users\edgar\Desktop\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmReporteVentaEmpleado.resources

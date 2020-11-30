@@ -131,5 +131,11 @@ namespace PuntoDeVenta.Presentacion
             
             ventana.Show();
         }
+
+        private void btnReporteVentas_Click(object sender, EventArgs e)
+        {
+            frmReporteVentas window = new frmReporteVentas();
+            window.Show();
+        }
     }
 }

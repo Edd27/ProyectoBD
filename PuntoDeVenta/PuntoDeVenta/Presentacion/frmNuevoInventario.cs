@@ -68,5 +68,10 @@ namespace PuntoDeVenta.Presentacion
         {
             this.CenterToScreen();
         }
+
+        private void btnminimizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
