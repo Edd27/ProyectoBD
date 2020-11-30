@@ -145,7 +145,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678 ";
+                cn.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345 ";
                 cn.Open();
                 String srt = "call InsertarProducto(@ID,@Prod,@Desc,@Tipo,@Talla,@Precio,@unitInStock)";
                 
@@ -195,7 +195,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678 ";
+                cn.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345 ";
                 cn.Open();
                 String srt = " call ModificarProducto(@ID,@Prod,@Desc,@Tipo,@Talla,@Precio,@unitInStock)";
 
