@@ -139,6 +139,7 @@ namespace PuntoDeVenta.Presentacion
             this.btnGenerarRepEmpleado.TabIndex = 36;
             this.btnGenerarRepEmpleado.Text = "BUSCAR";
             this.btnGenerarRepEmpleado.UseVisualStyleBackColor = false;
+            this.btnGenerarRepEmpleado.Click += new System.EventHandler(this.btnGenerarRepEmpleado_Click);
             // 
             // dataGridView1
             // 

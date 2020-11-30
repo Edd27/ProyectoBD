@@ -72,6 +72,7 @@
     <Compile Include="Objects\clsMuestraEmpleados.cs" />
     <Compile Include="Objects\clsProductos.cs" />
     <Compile Include="Objects\clsReporteVenta.cs" />
+    <Compile Include="Objects\clsReporteVenta2.cs" />
     <Compile Include="Objects\clsUsuarios.cs" />
     <Compile Include="Objects\clsVentas.cs" />
     <Compile Include="Presentacion\AgregarCliente.cs">

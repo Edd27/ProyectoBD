@@ -116,12 +116,7 @@ for each row
 begin
 if NEW.unitInStock< 0 then 
 set NEW.unitInStock=0;
-elseif NEW.NEW.unitInStock >0 then
+elseif NEW.unitInStock >0 then
 set NEW.unitInStock=NEW.unitInStock;
 end if;
 end $$
-
-DELIMITER ;
-
-SELECT IDVenta, Fecha, Total, Usuarios_IDusuario FROM Ventas WHERE YEAR(Fecha) = '2019' AND MONTH(Fecha) = '08';
- 

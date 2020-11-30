@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace PuntoDeVenta.Objects
 {
-    public class clsReporteVenta
+   public  class clsReporteVenta2
     {
 
-        private int id;
-        private string fecha;
-        private double total;
+        private int idEmpleado;
+        private int ventas;
         private string empleado;
+        private double total;
 
-        public int IDReporte
+        public int IDEmpleado
         {
-            get { return id; }
-            set { id = value; }
+            get { return idEmpleado; }
+            set { idEmpleado = value; }
         }
 
-        public string Fecha
+        public int Ventas
         {
-            get { return fecha; }
-            set { fecha = value; }
+            get { return ventas; }
+            set { ventas = value; }
         }
 
         public string Empleado

@@ -41,5 +41,35 @@ namespace PuntoDeVenta.Data
             return lista;
         }
 
+        public List<clsReporteVenta2> GenerarReporte2(string mes, string anio)
+        {
+            MySqlConnection conexxion = new MySqlConnection();
+            MySqlCommand comando = new MySqlCommand();
+
+            conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+            conexxion.Open();
+            /// EXTRAE EL REGISTRO DE LA BASE DE DATOS
+            string strSQL = "SELECT u.IdUsuario, CONCAT(u.Nombre,' ',u.Apellidos) AS Nombre, (SELECT COUNT(*) FROM VENTAS v WHERE v.Usuarios_IDusuario = u.IDusuario)AS Ventas, (SELECT SUM(v.Total) FROM Ventas v WHERE v.Usuarios_IDusuario = u.IDusuario)AS MontoTotal FROM usuarios u JOIN Ventas v ON u.IDusuario = v.Usuarios_IDusuario WHERE YEAR(v.Fecha) = '"+anio+"' AND MONTH(v.Fecha) = '"+mes+"' ORDER BY MontoTotal DESC";
+            comando = new MySqlCommand(strSQL, conexxion);
+            List<clsReporteVenta2> lista = new List<clsReporteVenta2>();
+            MySqlDataReader dr = comando.ExecuteReader();
+            while (dr.Read())
+            {
+                clsReporteVenta2 obj = new clsReporteVenta2();
+                obj.IDEmpleado = dr.GetInt32("IdUsuario");
+                obj.Empleado = dr.GetString("Nombre");
+                obj.Ventas = dr.GetInt32("Ventas");
+                obj.MontoTotal = dr.GetInt32("MontoTotal");
+
+                lista.Add(obj);
+            }
+            comando.Dispose();
+
+            /// FINALIZAMOS LA CONEXION CERRAMOS TODO
+            conexxion.Close();
+            conexxion.Dispose();
+            return lista;
+        }
+
     }
 }
