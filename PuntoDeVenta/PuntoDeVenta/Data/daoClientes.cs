@@ -29,7 +29,7 @@ namespace PuntoDeVenta.Data
             MySqlCommand comando = new MySqlCommand();
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 conexxion.Open();
 
                 /// AGREGAR EL REGISTRO A LA BASE DE DATOS   call InsertarCliente(0,"Roy","Guzman","4451236576")$$
@@ -71,7 +71,7 @@ namespace PuntoDeVenta.Data
             MySqlConnection conexxion = new MySqlConnection();
             MySqlCommand comando = new MySqlCommand();
 
-            conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+            conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
             conexxion.Open();
             /// EXTRAE EL REGISTRO DE LA BASE DE DATOS
             string strSQL = "select * from clientes";
@@ -112,7 +112,7 @@ namespace PuntoDeVenta.Data
             MySqlCommand comando = new MySqlCommand();
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 conexxion.Open();
 
                 /// ELIMINA EL REGISTRO DE LA BASE DE DATOS
@@ -149,7 +149,7 @@ namespace PuntoDeVenta.Data
             MySqlConnection conexxion = new MySqlConnection();
             MySqlCommand comando = new MySqlCommand();
 
-            conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+            conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
             conexxion.Open();
             /// EXTRAE EL REGISTRO DE LA BASE DE DATOS
             string strSQL = "select * from clientes where ID = " + idE;
@@ -192,7 +192,7 @@ namespace PuntoDeVenta.Data
             MySqlCommand comando = new MySqlCommand();
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 conexxion.Open();
 
                 /// AGREGAR LA ACTUALIZACION A LA BASE DE DATOS
@@ -232,7 +232,7 @@ namespace PuntoDeVenta.Data
             MySqlConnection conexxion = new MySqlConnection();
             MySqlCommand comando = new MySqlCommand();
 
-            conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+            conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
             conexxion.Open();
             /// EXTRAE EL REGISTRO DE LA BASE DE DATOS
             string strSQL = "select ID, Nombre, Apellidos, Numero_telefonico from usuarios where Nombre like'" + Busqueda.Nombre + "%'";
@@ -291,7 +291,7 @@ namespace PuntoDeVenta.Data
             {
 
 
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 conexxion.Open();
                 /// EXTRAE EL REGISTRO DE LA BASE DE DATOS
                 string strSQL = "select * from clientes where IDusuario = " + idE;

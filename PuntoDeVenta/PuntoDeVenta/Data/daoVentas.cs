@@ -22,7 +22,7 @@ namespace PuntoDeVenta.Data
             MySqlCommand cm = new MySqlCommand();
             try
             {
-                cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+                cn.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 cn.Open();
                 MySqlTransaction trans = cn.BeginTransaction();
 

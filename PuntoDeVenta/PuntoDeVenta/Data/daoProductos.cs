@@ -24,7 +24,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 conexxion.Open();
                 string strSQL = "select * from producto";
                 comando = new MySqlCommand(strSQL, conexxion);
@@ -84,7 +84,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 conexxion.Open();
                 string strSQL = "select * from producto where idProducto = @numero";
                 comando = new MySqlCommand(strSQL, conexxion);
@@ -246,7 +246,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 conexxion.Open();
                 string strSQL = "Delete from producto where idProducto = @numero";
                 comando = new MySqlCommand(strSQL, conexxion);
@@ -296,7 +296,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 conexxion.Open();
                 string strSQL = "SELECT * FROM producto where producto like concat( @texto ,'%')";
                 comando = new MySqlCommand(strSQL, conexxion);
@@ -357,7 +357,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 conexxion.Open();
                 string strSQL = "select count(total)as ventas,(select nombre from usuarios where Usuarios_IDusuario=IDusuario )as nombre, " +
                     "total from ventas where fecha between('2020-05-19')and('2020-05-20') GROUP BY Usuarios_IDusuario; ";

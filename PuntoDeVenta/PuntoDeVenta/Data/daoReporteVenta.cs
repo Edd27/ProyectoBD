@@ -16,7 +16,7 @@ namespace PuntoDeVenta.Data
             MySqlConnection conexxion = new MySqlConnection();
             MySqlCommand comando = new MySqlCommand();
 
-            conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+            conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
             conexxion.Open();
             /// EXTRAE EL REGISTRO DE LA BASE DE DATOS
             string strSQL = "SELECT v.IDVenta, v.Fecha, v.Total, u.Nombre FROM Ventas v JOIN Usuarios u ON u.IDusuario = v.Usuarios_IDusuario WHERE Fecha BETWEEN '" + fechaInicio +"' AND '" + fechaFin + "' ORDER BY Fecha ASC ";
@@ -46,7 +46,7 @@ namespace PuntoDeVenta.Data
             MySqlConnection conexxion = new MySqlConnection();
             MySqlCommand comando = new MySqlCommand();
 
-            conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678";
+            conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
             conexxion.Open();
             /// EXTRAE EL REGISTRO DE LA BASE DE DATOS
             string strSQL = "SELECT u.IdUsuario, CONCAT(u.Nombre,' ',u.Apellidos) AS Nombre, (SELECT COUNT(*) FROM VENTAS v WHERE v.Usuarios_IDusuario = u.IDusuario)AS Ventas, (SELECT SUM(v.Total) FROM Ventas v WHERE v.Usuarios_IDusuario = u.IDusuario)AS MontoTotal FROM usuarios u JOIN Ventas v ON u.IDusuario = v.Usuarios_IDusuario WHERE YEAR(v.Fecha) = '"+anio+"' AND MONTH(v.Fecha) = '"+mes+"' ORDER BY MontoTotal DESC";
