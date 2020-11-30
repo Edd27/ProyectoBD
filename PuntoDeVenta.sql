@@ -152,4 +152,22 @@ CREATE PROCEDURE  InsertarUsuario(
 in IDusuario int,in login varchar(50),in Nombre varchar(50),in Apellidos varchar(50),in pass varchar(50), in adminn tinyint )
 BEGIN
 insert into usuarios values (IDusuario,Login,Nombre,Apellidos,sha(pass),adminn);
-END $$               
+END $$        
+                                                                              
+CREATE PROCEDURE  EliminarUsuario(
+in ID int)
+BEGIN
+delete from usuarios where IDusuario=ID;
+END $$
+
+CREATE PROCEDURE  EliminarCliente(
+in IDs int)
+BEGIN
+delete from clientes where ID=IDs;
+END $$
+
+CREATE PROCEDURE  EliminarProductos(
+in IDs int)
+BEGIN
+delete from producto where idProducto=IDs;
+END $$                                                                                   
