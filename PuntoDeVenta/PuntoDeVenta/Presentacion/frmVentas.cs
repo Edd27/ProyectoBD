@@ -107,7 +107,7 @@ namespace Presentacion
         {
             MySqlConnection cn = new MySqlConnection();
             MySqlCommand cm = new MySqlCommand();
-            cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=12345678 ";
+            cn.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345 ";
             cn.Open();
             frmVentasBuscar abrir = new frmVentasBuscar();
             clsListaProductos clsProducto = abrir.showReturn();

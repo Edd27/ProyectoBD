@@ -22,7 +22,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString= "server=localhost; database=puntodeventa; user=root; pwd=root";
+                conexxion.ConnectionString= "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 conexxion.Open();
                 string strSQL = "select * from inventario";
                 comando = new MySqlCommand(strSQL, conexxion);
@@ -78,7 +78,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                cn.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root";
+                cn.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 cn.Open();
                 String str = "Insert into inventario values(@ID,@Nombre,@Des)";
                 cm = new MySqlCommand(str, cn);
@@ -122,7 +122,7 @@ namespace PuntoDeVenta.Data
 
             try
             {
-                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=root; pwd=root";
+                conexxion.ConnectionString = "server=localhost; database=puntodeventa; user=bd; pwd=12345";
                 conexxion.Open();
                 string strSQL = "select * from inventario where idinventario=@codigo";
                 comando = new MySqlCommand(strSQL, conexxion);
