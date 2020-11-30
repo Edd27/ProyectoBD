@@ -108,7 +108,7 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-INSERT INTO Usuarios(Login,Nombre,Apellidos,Password,Administrador) VALUES ('admin','Benito','Juárez',sha("root"),1);
+INSERT INTO Usuarios(Login,Nombre,Apellidos,Password,Administrador) VALUES ('admin','Edgar','Benavides Rodriguez',sha("root"),1);
                
 DELIMITER $$
 create trigger trigger_unitInStock before insert on producto
@@ -121,53 +121,7 @@ set NEW.unitInStock=NEW.unitInStock;
 end if;
 end $$
 
-CREATE PROCEDURE  InsertarProducto(
-in ID int,in Producto varchar(50),in Descripcion longtext,in tipo varchar(25),in talla varchar(20),in precio double(10,2),in cantidad int)
-BEGIN
-insert into producto values (ID,Producto,Descripcion,tipo,talla,precio,cantidad);
-END $$
-             
-CREATE PROCEDURE  ModificarProducto(
-in ID int,in Producto varchar(50),in Descripcion longtext,in tipo varchar(25),in talla varchar(20),in precio double(10,2),in cantidad int)
-BEGIN
-UPDATE producto SET Producto=Producto,Descripcion=Descripcion,Tipo=tipo,Talla=talla,Precio=precio,unitInStock=cantidad where idProducto= ID;
-END $$               
+DELIMITER ;
 
-               
-CREATE PROCEDURE  InsertarCliente(
-in ID int,in Nombre varchar(50),in Apellidos varchar(50),in numero_telefonico char(10))
-BEGIN
-insert into clientes values (ID,Nombre,Apellidos,numero_telefonico);
-END $$
-call InsertarCliente(0,"Roy","Guzman","4451236576")$$
-
-
-CREATE PROCEDURE  ModificarCliente(
-in ID int,in Nombre varchar(50),in Apellidos varchar(50),in numero_telefonico char(10))
-BEGIN
-insert into clientes values (ID,Nombre,Apellidos,numero_telefonico);
-END $$
-
-CREATE PROCEDURE  InsertarUsuario(
-in IDusuario int,in login varchar(50),in Nombre varchar(50),in Apellidos varchar(50),in pass varchar(50), in adminn tinyint )
-BEGIN
-insert into usuarios values (IDusuario,Login,Nombre,Apellidos,sha(pass),adminn);
-END $$        
-                                                                              
-CREATE PROCEDURE  EliminarUsuario(
-in ID int)
-BEGIN
-delete from usuarios where IDusuario=ID;
-END $$
-
-CREATE PROCEDURE  EliminarCliente(
-in IDs int)
-BEGIN
-delete from clientes where ID=IDs;
-END $$
-
-CREATE PROCEDURE  EliminarProductos(
-in IDs int)
-BEGIN
-delete from producto where idProducto=IDs;
-END $$                                                                                   
+SELECT IDVenta, Fecha, Total, Usuarios_IDusuario FROM Ventas WHERE YEAR(Fecha) = '2019' AND MONTH(Fecha) = '08';
+ 

@@ -61,6 +61,7 @@
     <Compile Include="Data\daoClientes.cs" />
     <Compile Include="Data\daoInventario.cs" />
     <Compile Include="Data\daoProductos.cs" />
+    <Compile Include="Data\daoReporteVenta.cs" />
     <Compile Include="Data\DaoUsuarios.cs" />
     <Compile Include="Data\daoVentas.cs" />
     <Compile Include="Objects\clsClientes.cs" />
@@ -70,7 +71,7 @@
     <Compile Include="Objects\clsMuestraClientes.cs" />
     <Compile Include="Objects\clsMuestraEmpleados.cs" />
     <Compile Include="Objects\clsProductos.cs" />
-    <Compile Include="Objects\clsReporteDeVenta.cs" />
+    <Compile Include="Objects\clsReporteVenta.cs" />
     <Compile Include="Objects\clsUsuarios.cs" />
     <Compile Include="Objects\clsVentas.cs" />
     <Compile Include="Presentacion\AgregarCliente.cs">

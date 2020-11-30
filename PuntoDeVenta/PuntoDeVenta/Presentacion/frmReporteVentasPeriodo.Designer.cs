@@ -112,6 +112,7 @@ namespace PuntoDeVenta.Presentacion
             this.btnGenerarRepP.TabIndex = 38;
             this.btnGenerarRepP.Text = "BUSCAR";
             this.btnGenerarRepP.UseVisualStyleBackColor = false;
+            this.btnGenerarRepP.Click += new System.EventHandler(this.btnGenerarRepP_Click);
             // 
             // frmReporteVentasPeriodo
             // 

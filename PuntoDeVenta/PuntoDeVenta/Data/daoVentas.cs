@@ -73,5 +73,6 @@ namespace PuntoDeVenta.Data
                 cn.Dispose();
             }
         }
+
     }
 }

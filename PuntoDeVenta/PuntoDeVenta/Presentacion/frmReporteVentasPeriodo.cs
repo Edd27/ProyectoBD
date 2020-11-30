@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PuntoDeVenta.Objects;
+using PuntoDeVenta.Data;
 
 namespace PuntoDeVenta.Presentacion
 {
@@ -25,6 +27,17 @@ namespace PuntoDeVenta.Presentacion
         private void frmReporteVentasPeriodo_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+        }
+
+        private void btnGenerarRepP_Click(object sender, EventArgs e)
+        {
+            string fechaInicio = dtpInicio.Value.ToString("yyyy-MM-dd");
+            string fechaFin = dtpFin.Value.ToString("yyyy-MM-dd");
+
+            daoReporteVenta reporte = new daoReporteVenta();
+
+            dtwRepsPeriodo.DataSource = reporte.GenerarReporte(fechaInicio, fechaFin);
+
         }
     }
 }

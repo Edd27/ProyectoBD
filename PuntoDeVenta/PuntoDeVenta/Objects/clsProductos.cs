@@ -12,7 +12,7 @@ namespace PuntoDeVenta.Objects
         String producto;
         String descripcion;
         String tipo;
-        String talla;
+        string talla;
         double precio;
         int unitInStock;
 
