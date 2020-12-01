@@ -28,7 +28,6 @@ C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\Pr
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmAgregarEmpleado.resources
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmAgregarInventario.resources
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmEliminarInventario.resources
-C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmFinanzasPorCliente.resources
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmModificarEmpleado.resources
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmModificarInventario.resources
 C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmNuevoInventario.resources
@@ -92,3 +91,6 @@ C:\Users\edgar\Desktop\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVen
 C:\Users\edgar\Desktop\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmReporteVentas.resources
 C:\Users\edgar\Desktop\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmReporteVentasPeriodo.resources
 C:\Users\edgar\Desktop\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmReporteVentaEmpleado.resources
+C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmReporteVentaEmpleado.resources
+C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmReporteVentas.resources
+C:\Users\EdgarSsj\Source\Repos\ProyectoBD\PuntoDeVenta\PuntoDeVenta\obj\Debug\PuntoDeVenta.Presentacion.frmReporteVentasPeriodo.resources

@@ -15,13 +15,13 @@ namespace PuntoDeVenta.Data
     {
 
         /// <summary>
-        /// Metodo que agrega todos los datos de un empleado a la base de datos
+        /// Metodo que agrega todos los datos de un cliente a la base de datos
         /// Recibe un parametro de tipo clsUsuarios
         /// </summary>
         /// <param name="agrega"></param>
         /// <returns></returns>
-        /// Retorna un true si el empleado fue agregado con exito a la base de datos
-        /// Retorna un false si no se pudo agregar el empleado
+        /// Retorna un true si el cliente fue agregado con exito a la base de datos
+        /// Retorna un false si no se pudo agregar el cliente
 
         public bool MAgregarClientes(clsClientes agrega)
         {
@@ -62,10 +62,10 @@ namespace PuntoDeVenta.Data
 
 
         /// <summary>
-        /// Metodo que muestra el ID, el Nombre y los Apellidos de los empleados
+        /// Metodo que muestra el ID, el Nombre y los Apellidos de los clientes
         /// </summary>
         /// <returns></returns>
-        /// Se retorna una lista de todos los Empleados encontrados
+        /// Se retorna una lista de todos los clientes encontrados
         public List<clsMuestraClientes> Mmostrarclientes()
         {
             MySqlConnection conexxion = new MySqlConnection();
@@ -99,13 +99,13 @@ namespace PuntoDeVenta.Data
 
 
         /// <summary>
-        /// Metodo que Elimina un empleado de la base de datos
+        /// Metodo que Elimina un cliente de la base de datos
         /// Recibe un parametro de tipo int
         /// </summary>
         /// <param name="llaveP"></param>
         /// <returns></returns>
-        /// Retorna un true si el empleado fue eliminado con exito de la base de datos
-        /// Retorna un false si no se pudo eliminar el empleado
+        /// Retorna un true si el cliente fue eliminado con exito de la base de datos
+        /// Retorna un false si no se pudo eliminar el cliente
         public bool MEliminarCliente(int llaveP)
         {
             MySqlConnection conexxion = new MySqlConnection();
@@ -138,12 +138,12 @@ namespace PuntoDeVenta.Data
 
 
         /// <summary>
-        /// Metodo que extrae todos los datos un empleado de la base de datos
+        /// Metodo que extrae todos los datos un cliente de la base de datos
         /// Recibe un parametro de tipo int
         /// </summary>
         /// <param name="idE"></param>
         /// <returns></returns>
-        /// Retorna una lista de todos los datos de un Empleado encontrado
+        /// Retorna una lista de todos los datos de un cliente encontrado
         public List<clsClientes> MtraerClientes(int idE)
         {
             MySqlConnection conexxion = new MySqlConnection();
